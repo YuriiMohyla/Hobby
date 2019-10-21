@@ -25,7 +25,7 @@ public class Football extends Hobby{
 
     @Override
     public void tellAboutHobby(){
-        this.toString();
+        System.out.println(this.toString());
         System.out.println("My favorite hobby is football");
     }
 }
