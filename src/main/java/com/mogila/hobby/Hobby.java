@@ -2,12 +2,13 @@ package com.mogila.hobby;
 
 public abstract class Hobby {
     private String name;
-    private int count_of_hours;
+    private int countOfHours;
     private char group;
+    final int a = 10;   //переменная для обработки исключений
 
-    public Hobby(String name, int count_of_hours, char group) {
+    public Hobby(String name, int countOfHours, char group) {
         this.name = name;
-        this.count_of_hours = count_of_hours;
+        this.countOfHours = countOfHours;
         this.group = group;
     }
 
@@ -19,12 +20,12 @@ public abstract class Hobby {
         this.name = name;
     }
 
-    public int getCount_of_hours() {
-        return count_of_hours;
+    public int getCountOfHours() {
+        return countOfHours;
     }
 
-    public void setCount_of_hours(int count_of_hours) {
-        this.count_of_hours = count_of_hours;
+    public void setCountOfHours(int countOfHours) {
+        this.countOfHours = countOfHours;
     }
 
     public char getGroup() {
@@ -37,14 +38,13 @@ public abstract class Hobby {
 
     @Override
     public String toString() {
-        return "Hobby{" +
-                "name='" + name + '\'' +
-                ", count_of_hours=" + count_of_hours +
-                ", group=" + group +
-                '}';
+        return "Hobby{"
+                + "name='" + name + '\''
+                + ", count_of_hours=" + countOfHours
+                + ", group=" + group + '}';
     }
 
-    public abstract void tellAboutHobby();
+    public abstract void tellAboutHobby(int args) throws HobbyException;
 }
 
 

@@ -1,31 +1,35 @@
 package com.mogila.hobby;
 
-public class Football extends Hobby{
-    private String best_player;
+public class Football extends Hobby {
+    private String bestPlayer;
 
-    public Football(String name, int count_of_hours, char group, String best_player) {
-        super(name, count_of_hours, group);            //вызов метода базового класса
-        this.best_player = best_player;
+    public Football(String name, int count_of_hours, char group, String bestPlayer) {
+        super(name, count_of_hours, group); //вызов метода базового класса
+        this.bestPlayer = bestPlayer;
     }
 
-    public String getBest_player() {
-        return best_player;
+    public String getBestPlayer() {
+        return bestPlayer;
     }
 
-    public void setBest_player(String best_player) {
-        this.best_player = best_player;
+    public void setBestPlayer(String bestPlayer) {
+        this.bestPlayer = bestPlayer;
     }
 
     @Override
     public String toString() {
-        return "Football{" + super.toString() +
-                "best_player='" + best_player + '\'' +
-                '}';
+        return "Football{" + super.toString()
+                + "best_player='" + bestPlayer + '\''
+                + '}';
     }
 
     @Override
-    public void tellAboutHobby(){
-        System.out.println(this.toString());
+    public void tellAboutHobby(final int args) throws HobbyException {
+        if (args < a) {
+            throw new HobbyException();
+        }
+
+        System.out.println(this);
         System.out.println("My favorite hobby is football");
     }
 }
