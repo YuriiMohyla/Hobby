@@ -5,10 +5,11 @@ import com.mogila.hobby.HobbyException;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
+
 
 public class Test {
-    final static Logger logger = Logger.getLogger(String.valueOf(Test.class));
+    final static Logger logger = Logger.getLogger(Test.class);
     public static void main(final String[] args) throws IOException {
         run();
     }
@@ -28,7 +29,7 @@ public class Test {
             logger.info("Число больше 10 = "+ a );
         } catch (HobbyException ex) {
             System.out.println("Ошибка число меньше 10");
-            logger.info("Введенное число меньше 10 = "+ a);
+            logger.error("Введенное число меньше 10 = "+ a);
         } finally {
             System.out.println("Попробуйте еще раз");
         }
