@@ -1,4 +1,5 @@
 package com.mogila;
+import com.mogila.TestCollection.MainMenu;
 import com.mogila.hobby.Fishing;
 import com.mogila.hobby.Hobby;
 import com.mogila.hobby.HobbyException;
@@ -11,9 +12,10 @@ import org.apache.log4j.Logger;
 public class Test {
     final static Logger logger = Logger.getLogger(Test.class);
     public static void main(final String[] args) throws IOException {
-        run();
+        MainMenu.printMainMenu();
+
     }
-    private static void run() throws IOException {
+   private static void run() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите название рыбалки, кол-во часов, группу и название рыбы:");
         String name = reader.readLine();
