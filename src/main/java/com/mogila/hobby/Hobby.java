@@ -1,6 +1,9 @@
 package com.mogila.hobby;
 
-public abstract class Hobby {
+
+import java.io.Serializable;
+
+public abstract class Hobby implements Serializable {
     private String name;
     private int countOfHours;
     private char group;

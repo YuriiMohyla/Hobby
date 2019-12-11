@@ -31,4 +31,6 @@ public class Fishing extends Hobby {
         System.out.println(this);
         System.out.println("My favorite hobby is fishing");
     }
+
+
 }

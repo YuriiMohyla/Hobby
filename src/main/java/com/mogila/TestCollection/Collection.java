@@ -15,7 +15,6 @@ public class Collection {
     private TreeSet<Hobby> treeSet = new TreeSet<>(new HobbyComp());
     private HashMap<Integer,Hobby> hashMap = new HashMap<>();
     private TreeMap<Integer,Hobby> treeMap = new TreeMap<>();
-
     //ArrayList methods
     public long GenerateArrayList() {
         timeStart = System.currentTimeMillis();
@@ -177,7 +176,6 @@ public class Collection {
         return timeEnd - timeStart;
     }
 }
-
 
 class HobbyComp implements Comparator<Hobby>{
     @Override
